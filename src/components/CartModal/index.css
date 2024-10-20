@@ -6,7 +6,7 @@
   height: 100%;
   background-color: white; /* Optional: Dim background */
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: center; /* Center the entire modal */
 }
 
