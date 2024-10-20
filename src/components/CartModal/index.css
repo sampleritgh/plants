@@ -1,0 +1,45 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; /* Optional: Dim background */
+  display: flex;
+  align-items: center; 
+  justify-content: center; /* Center the entire modal */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  gap: 20px; /* Space between elements */
+  text-align: center;
+}
+
+.modal-content img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.modal-buttons {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 15px; /* Space between the buttons */
+  width: 100%; /* Full width */
+  align-items: center; /* Center the buttons horizontally */
+}
+
+.modal-content .btn {
+  width: 80%; /* Button width */
+  max-width: 250px; /* Limit max size */
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}

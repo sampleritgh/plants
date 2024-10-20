@@ -1,36 +1,21 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+/* src/components/Header.css */
+.navbar-nav .nav-link {
+  margin-left: 15px;
 }
 
-.heading {
-  font-family: 'Roboto';
-  font-size: 40px;
-  color: #32404d;
+
+.form-control {
+  width: 300px;
+}
+.nav-link {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s, text-decoration 0.3s;
 }
 
-.count {
-  font-size: 80px;
-  font-family: 'Roboto';
-  color: #2e3e4e;
-  margin-top: 8px;
-  margin-bottom: 20px;
-}
-
-.button {
-  font-size: 16px;
-  font-weight: 400;
-  font-family: 'Roboto';
-  color: white;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin: 8px;
-  background-color: #7c69e9;
-  border: none;
-  border-radius: 4px;
+.nav-link.active {
+  color: rgb(1, 1, 35);
+  text-decoration: underline;
 }

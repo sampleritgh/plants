@@ -1,28 +1,38 @@
-// CartModal.js
+// CartModal/index.js
 import React from 'react'
-import {Modal, Button} from 'react-bootstrap'
+import {useNavigate} from 'react-router-dom'
+import './index.css' // Optional: Styling for the modal
 
-function CartModal({show, product, onHide}) {
-  if (!product) return null
+function CartModal({product, show, onClose}) {
+  const navigate = useNavigate()
+
+  if (!show) return null // If modal is not open, return null.
+
+  const handleConfirm = () => {
+    onClose() // Close the modal before navigating.
+    navigate('/thank-you') // Redirect to Thank You page.
+  }
 
   return (
-    <Modal show={show} onHide={onHide}>
-      <Modal.Header closeButton>
-        <Modal.Title>{product.name}</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
+    <div className="modal-overlay">
+      <div className="modal-content">
+        <h2>Product Details</h2>
+        <img src={product.image} alt={product.name} />
+        <p>
+          <strong>{product.name}</strong>
+        </p>
         <p>Price: ₹{product.price}</p>
-        <p>Do you want to add this product to the cart?</p>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={onHide}>
-          Close
-        </Button>
-        <Button variant="primary" onClick={onHide}>
-          Add to Cart
-        </Button>
-      </Modal.Footer>
-    </Modal>
+
+        <div className="modal-buttons">
+          <button className="btn btn-success" onClick={handleConfirm}>
+            Confirm Add to Cart
+          </button>
+          <button className="btn btn-danger" onClick={onClose}>
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
   )
 }
 

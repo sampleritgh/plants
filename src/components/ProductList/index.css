@@ -1,0 +1,118 @@
+/* styles.css */
+
+/* styles.css */
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.view-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Category Selection Buttons */
+.category-buttons {
+  margin-bottom: 20px;
+}
+
+.category-buttons .btn {
+  margin-right: 10px;
+}
+
+/* Nursery Heading */
+.nursery-heading {
+  margin: 20px 0;
+  font-size: 24px;
+}
+.product-detail-image {
+  height: 100%;
+  width: 100%;
+}
+.product-page-container {
+  margin: 20px;
+  padding: 10px;
+}
+
+/* Product Cards */
+.product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.filter-section {
+  padding : 20px;
+}
+
+/* Image Carousel */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%; /* Full width for carousel container */
+}
+
+.carousel-container button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%; /* Full width for carousel */
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.carousel-images {
+  display: inline-flex;
+  transition: transform 0.3s ease;
+}
+
+.carousel-images img {
+  width: auto; /* Set to auto for responsive images */
+  height: 150px; /* Fixed height for consistency */
+  margin-right: 10px; /* Space between images */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .carousel-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-cards {
+    flex-direction: column; /* Stack product cards vertically on smaller screens */
+    align-items: center; /* Center product cards */
+  }
+
+  .category-buttons .btn {
+    margin: 5px 0; /* Adjust margin for mobile buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .nursery-heading {
+    font-size: 20px; /* Smaller font size for mobile */
+  }
+
+  .carousel-container button {
+    font-size: 18px; /* Smaller arrows for mobile */
+  }
+
+  .carousel-images img {
+    height: 120px; /* Smaller height for mobile */
+  }
+}

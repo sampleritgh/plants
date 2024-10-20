@@ -1,0 +1,41 @@
+.thank-you-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f8ff;
+}
+
+.thank-you-card {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.thank-you-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.thank-you-card h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #4caf50;
+}
+
+.thank-you-card p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.thank-you-card .btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
